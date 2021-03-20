@@ -40,14 +40,14 @@ int find_y(double* values, double y, int l, int r){
             return mid;
         }
         else if(values[mid] < y){
-            return find_x(values, y, mid, r);
+            return find_y(values, y, mid, r);
         }
         else{
-            return find_x(values, y, l, mid);
+            return find_y(values, y, l, mid);
         }
     }
     else{
-        cout<<values[r]<<" "<<values[l]<<" "<<y<<"\n";
+        // cout<<values[r]<<" "<<values[l]<<" "<<y<<"\n";
         if(y>values[r] || y<values[l]){
             return -1;
         }
@@ -62,6 +62,7 @@ double binary_search_interpolator_2D(double* values_x, double* values_y, double 
     int index_y = find_y(values_y,y,0,n-1);
     if(index_x==-1 || index_y==-1){
         cout<<"cant find it\n";
+        
         return -1;
     }
     if(values_x[index_x]==x && values_y[index_y]==y){
@@ -96,7 +97,7 @@ void run_it(double* values_x, double* values_y,double values[][n], double interv
         // cout<<"x is "<<x<<"\n";
         // cout<<"y is "<<y<<"\n";
         // cout<<binary_search_interpolator_2D( values_x, values_y, values,x,y, n)<<"\n";
-
+        binary_search_interpolator_2D( values_x, values_y, values,x,y, n);
     }
 }
 
