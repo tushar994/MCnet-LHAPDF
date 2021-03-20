@@ -1,0 +1,4 @@
+MSE for interval 0.1 is 3.3007056728861102e-06
+MSE for interval 0.2 is 7.230871762727755e-06
+MSE for interval 0.4 is 0.00011154828724936548
+MSE for interval 0.5 is 0.00026221180257825574
